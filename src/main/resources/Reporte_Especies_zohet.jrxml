@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Reporte_Especies_zohet" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ae614016-002b-4220-a8c1-8cea2361d0f5">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="NOMBRE_CIENTIFICO" class="java.lang.String"/>
+	<field name="EJEMPLARES" class="java.lang.Double"/>
+	<field name="DESCRIPCION" class="java.lang.String"/>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#FCCFFB" uuid="73f5130b-4e42-4010-a39c-ae6898077ce8"/>
+				<staticText>
+					<reportElement x="10" y="24" width="360" height="43" forecolor="#120606" backcolor="#050404" uuid="1c56cbe4-6a60-4b14-bbbc-b20767fbbfc5"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Reporte Especies]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="45">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="fe442589-db84-4cba-a6b7-032070db1b45"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="5" width="120" height="25" uuid="de3f70da-9670-47d0-94ae-a362ef39a435"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre Cientifico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="3" width="62" height="22" uuid="5cf9b0e4-e88b-40a5-8665-71ba9c461068"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cantidad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="440" y="3" width="75" height="18" uuid="0c0b7699-67b8-4f94-9cd8-4d920b262db6"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descripcion]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="40">
+			<textField>
+				<reportElement x="270" y="5" width="92" height="15" uuid="89b6d477-5def-4b96-bf39-874e0ac998fb"/>
+				<textFieldExpression><![CDATA[$F{EJEMPLARES}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="460" y="5" width="95" height="15" uuid="e5d911f9-b3c1-4aca-be08-ba920bdb4426"/>
+				<textFieldExpression><![CDATA[$F{DESCRIPCION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="5" width="130" height="15" uuid="2a4a8565-3d79-4f35-8e6e-4c2fa76b03fd"/>
+				<textFieldExpression><![CDATA[$F{NOMBRE_CIENTIFICO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="018ab507-5b29-41c3-9925-1630d2a7aaa6"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Pág "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="220e19cb-7abf-48ee-b5a5-d79ab008bb6f"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="7031b2de-78dd-4505-99a7-b73b25b05c14"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
